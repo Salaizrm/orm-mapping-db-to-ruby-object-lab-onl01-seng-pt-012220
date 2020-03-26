@@ -20,8 +20,9 @@ class Student
     sql = <<-SQL
       SELECT name
       FROM students
-      WHERE name = ""
     SQL
+
+    db = DB[:conn].execute
     # find the student in the database given a name
     # return a new instance of the Student class
   end
