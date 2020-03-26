@@ -34,15 +34,6 @@ class Student
     end.first
   end
 
-  def self.all_students_in_grade_9
-    sql = <<-SQL
-    SELECT *
-    FROM students
-    WHERE grade = 9
-    SQL
-    binding.pry
-
-  end
 
   def save
     sql = <<-SQL
@@ -69,6 +60,4 @@ class Student
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end
-
-end
 end
