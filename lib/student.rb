@@ -40,6 +40,7 @@ class Student
     FROM students
     WHERE grade = 9
     SQL
+    binding.pry
 
   end
 
