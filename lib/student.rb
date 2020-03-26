@@ -23,10 +23,8 @@ class Student
     SQL
 
     DB[:conn].execute(sql).map do |names|
-      self.new_from_db
+      self.new_from_db(names)
     end
-    # find the student in the database given a name
-    # return a new instance of the Student class
   end
 
   def save
