@@ -48,11 +48,11 @@ class Student
   end
 
   def self.students_below_12th_grade
-  sql = <<-SQL
+    sql = <<-SQL
      SELECT COUNT(grade > 10) FROM students
-  SQL
-  DB[:conn].execute(sql)
-end
+     SQL
+     DB[:conn].execute(sql)
+  end
 
 
   def save
