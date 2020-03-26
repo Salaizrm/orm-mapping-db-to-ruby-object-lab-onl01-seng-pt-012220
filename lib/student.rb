@@ -20,6 +20,7 @@ class Student
     sql = <<-SQL
       SELECT name
       FROM students
+      WHERE name = ? 
     SQL
 
     DB[:conn].execute(sql, name).map do |names|
