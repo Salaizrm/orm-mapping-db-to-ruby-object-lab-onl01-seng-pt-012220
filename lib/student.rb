@@ -42,6 +42,9 @@ class Student
     WHERE grade = 9
     SQL
 
+    DB[:conn].execute(sql).each do |grade|
+      self.new_from_db(grade)
+    end
   end
 
   def save
