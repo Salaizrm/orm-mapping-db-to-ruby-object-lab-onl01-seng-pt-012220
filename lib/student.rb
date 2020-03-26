@@ -3,6 +3,10 @@ class Student
 
   def self.new_from_db(row)
 
+    sql = <<-SQL
+
+    SQL
+
     # create a new Student object given a row from the database
   end
 
